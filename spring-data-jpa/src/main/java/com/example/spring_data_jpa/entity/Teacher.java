@@ -14,6 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+
 public class Teacher {
 
     @Id
@@ -32,11 +33,12 @@ public class Teacher {
 
 
     @OneToMany(
-            cascade = CascadeType.ALL
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY
     )
             @JoinColumn(
                     name = "teacher_id",
-                    referencedColumnName = "teacherID"
+                    referencedColumnName = "teacherId"
             )
     List<Course> courses;
 }
