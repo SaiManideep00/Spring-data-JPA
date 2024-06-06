@@ -19,8 +19,8 @@ class StudentRepositoryTest {
     @Test
     public void saveStudent()
     {
-        Guardian guardian=Guardian.builder().email("mkljs@gmial.com").name("Mukesh").mobile("9898982928").build();
-        Student student=Student.builder().emailId("example2@gmail.com").firstName("Rishi").lastName("C").guardian(guardian).build();
+        Guardian guardian=Guardian.builder().email("nkjlgfh@gmial.com").name("Ambani").mobile("9898983934").build();
+        Student student=Student.builder().emailId("example4@gmail.com").firstName("Aaksh").lastName("amadf").guardian(guardian).build();
         studentRepository.save(student);
 
     }
@@ -34,5 +34,23 @@ class StudentRepositoryTest {
     public void findByLastNameContaining()
     {
         System.out.println(studentRepository.findByLastNameContaining("C"));
+    }
+
+    @Test
+    public  void findByEmailAddress()
+    {
+        System.out.println(studentRepository.findByEmailAddress("example4@gmail.com"));
+    }
+
+    @Test
+    public  void findByEmailAddressNativeSQL()
+    {
+        System.out.println(studentRepository.findByEmailAddressNative("example4@gmail.com"));
+    }
+
+    @Test
+    public  void findByEmailAddressNativeSQLParam()
+    {
+        System.out.println(studentRepository.findByEmailAddressNamedParam("example4@gmail.com"));
     }
 }
