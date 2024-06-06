@@ -53,4 +53,11 @@ class StudentRepositoryTest {
     {
         System.out.println(studentRepository.findByEmailAddressNamedParam("example4@gmail.com"));
     }
+
+//    @Test
+//    public void updateFirstNameByEmailAddress()
+//    {
+//        studentRepository.updateFirstNameByEmailAddress("sachin","example4@gmail.com");
+//       // System.out.println(studentRepository.findByEmailAddress("example4@gmail.com"));
+//    }
 }
